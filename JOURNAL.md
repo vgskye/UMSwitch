@@ -10,3 +10,24 @@ This is my journal of the design and building process of **UMSwitch**.
 You can view this journal in more detail on **Hack Club Blueprint** [here](https://blueprint.hackclub.com/projects/190).
 
 
+## 10/6/2025 - research, scehematics, madness, draft 1!  
+
+whoops I forgot to journal my progress, so basically I wanted to make a USB that's multiple USBs at once, using it like:
+1. put iso files in the "real" drive
+2. select iso file in device
+3. iso file appears as the drive contents
+
+for this I need a high-capacity storage and USB HS speeds bare minimum, so I need a microcontroller with a SDMMC peripheral and USB HS. Not a lot of those, so after sifting through a lot I found the STM32U595RI and was designing around it.
+
+unfortunately, after a bit of planning the firmware, I encountered the clockthulu and was nearly driven to madness, so I started looking for an alternative(also it was 13.5$ a piece).
+
+Fig 1. Clockthulu
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NzY2LCJwdXIiOiJibG9iX2lkIn19--9442b911b4779a9268d0902bd27385fe3a7c4d98/image.png)
+
+After a bit more digging, I found out about the LPC5526JBD64, which was only around 5$ a piece and seemed to have less outer gods needed for system configuration.
+
+after rewiring, I needed to fit a screen in, which would've required double sided component placement, so I made the thing two pcbs connected via a header and some M2 screws. thus the first draft of UMSwitch(because it's a *U*SB *M*ass *S*torage device that *switch*es between virtual disks) is, uh, done I think?
+
+![umswitch.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NzY0LCJwdXIiOiJibG9iX2lkIn19--7d8a893fb69a4fd19978543b2a44379959b22c84/umswitch.png)
+  
+
