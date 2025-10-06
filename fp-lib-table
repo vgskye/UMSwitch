@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "HTQFP64")(type "KiCad")(uri "${KIPRJMOD}/HTQFP64.pretty")(options "")(descr ""))
+)
